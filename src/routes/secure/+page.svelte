@@ -32,4 +32,4 @@
 </script>
 
 <Nav active={1} />
-<Calendar {events} title={"Your Events"}/>
+<Calendar {events} personal/>

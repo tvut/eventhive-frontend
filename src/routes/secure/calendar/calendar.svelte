@@ -1,7 +1,7 @@
 <script>
 	import CalendarEvent from './calendar-event.svelte';
 
-	export let title;
+	export let personal = false;
 
 	export let events;
     export let categories = [true, true, true, true, true];
@@ -31,9 +31,9 @@
 {#key freeFood}
 <div class="flex justify-center w-full">
 	<div class="w-3/5 mt-4">
-		{#if events}
-			{#if title}
-				<h1 class="text-4xl font-semibold text-gray-800 mb-8">{title}</h1>
+		{#if events && Object.keys(events).length>0}
+			{#if personal}
+				<h1 class="text-4xl font-semibold text-gray-800 mb-8">Your Events</h1>
 			{/if}
 			{#each Object.keys(events) as year}
 				<h1 class="text-2xl font-semibold text-gray-600">{year}</h1>
@@ -51,6 +51,8 @@
 					{/each}
 				{/each}
 			{/each}
+		{:else if personal}
+			You have no events.
 		{/if}
 	</div>
 </div>

@@ -13,7 +13,8 @@
 		<div class="container mt-16 mb-16">
 			<div class="grid md:grid-cols-2">
 				<div class="w-full md:pl-32">
-					<h1 class="text-4xl text-left">Find out what's happening on campus.</h1>
+					<h1 class="text-4xl text-left font-bold">Find out what's happening on campus.</h1>
+					<h2 class="text-3xl pt-6 text-left font-semibold">Powered by <span class="text-red">AI.</span></h2>
 					<h3 class="text-lg pt-6">
 						EventHive will let you see every event happening from every club and organization on
 						campus, at any given time.
