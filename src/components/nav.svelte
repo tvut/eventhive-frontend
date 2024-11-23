@@ -9,6 +9,7 @@
 	export let active = 0;
 
 	let username = '';
+	let name = '';
 
 	const getProfile = async () => {
 		let token = get(authToken);
@@ -21,6 +22,7 @@
 			.get('http://localhost:8000/profile', config)
 			.then((response) => {
 				username = response.data.username;
+				name = response.data.name;
 			})
 			.catch((err) => console.log(err));
 	};
@@ -72,7 +74,7 @@
 							<div
 								class="ml-4 text-white rounded-full w-8 h-8 bg-red flex items-center text-center"
 							>
-								<p class="w-full text-center">{username.toUpperCase().charAt(0)}</p>
+								<p class="w-full text-center">{(name ? name : username).toUpperCase().charAt(0)}</p>
 							</div>
 						</div>
 						<button
