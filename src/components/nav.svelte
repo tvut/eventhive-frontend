@@ -29,8 +29,7 @@
 		getProfile();
 	});
 </script>
-
-<nav class="bg-white border-gray-200 border-b-solid border-b-2 border-grey-100">
+<nav class="bg-white border-gray-200 border-b-solid border-b-2 border-grey-100 fixed w-screen">
 	<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 		<a on:click={() => goto('/secure')} class="flex items-center space-x-3 rtl:space-x-reverse">
 			<img src={logo} class="h-8" alt="Flowbite Logo" />
@@ -91,3 +90,4 @@
 		</div>
 	</div>
 </nav>
+<div style="height:64px" class="w-screen"></div>
