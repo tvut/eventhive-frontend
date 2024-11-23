@@ -4,6 +4,7 @@
 	import { goto } from '$app/navigation';
     import Nav from '../../../components/nav.svelte';
 	import { onMount } from 'svelte';
+	import Calendar from './calendar.svelte';
 
 	onMount(() => {
 		if (!get(authToken)) {
@@ -14,4 +15,4 @@
 
 <Nav active={2}/>
 
-welcome to the calendar
+<Calendar/>
