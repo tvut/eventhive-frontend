@@ -21,6 +21,9 @@
 		"vite": "^5.0.3"
 	},
 	"dependencies": {
-		"axios": "^1.7.7"
+		"@rgossiaux/svelte-headlessui": "^2.0.0",
+		"axios": "^1.7.7",
+		"flowbite": "^2.5.2",
+		"flowbite-svelte": "^0.47.3"
 	}
 }

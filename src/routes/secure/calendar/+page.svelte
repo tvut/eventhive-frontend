@@ -1,8 +1,8 @@
 <script>
-	import { authToken } from '../../stores/auth';
+    import { authToken } from '../../../stores/auth';
 	import { get } from 'svelte/store';
 	import { goto } from '$app/navigation';
-	import Nav from '../../components/nav.svelte';
+    import Nav from '../../../components/nav.svelte';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
@@ -12,12 +12,6 @@
 	});
 </script>
 
-<Nav active={1} />
+<Nav active={2}/>
 
-in secure
-
-<a
-	on:click={() => {
-		goto('secure/profile');
-	}}>profile</a
->
+welcome to the calendar
