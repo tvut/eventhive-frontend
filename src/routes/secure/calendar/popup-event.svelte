@@ -132,7 +132,7 @@
 									</div>
 									{#if hoveredUserIndex === index}
 										<div
-											class="absolute -bottom-6 transform text-sm text-gray-600"
+											class="absolute -bottom-10 transform text-sm text-white bg-red p-1.5 -ml-1 rounded-full"
 											style="white-space: nowrap; left:{hoveredUserIndex * 26-8}px"
 										>
 											{user.name ? user.name : user.username}
