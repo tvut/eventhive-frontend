@@ -21,9 +21,9 @@
 		} else if (s == 'Academic') {
 			return '#08b2e3';
 		} else if (s == 'Sports') {
-			return '#628b48';
+			return '#640D14';
 		} else if (s == 'Club') {
-			return '#fff370';
+			return '#FE7F2D';
 		} else if (s == 'Professional') {
 			return '#094074';
 		} else {
