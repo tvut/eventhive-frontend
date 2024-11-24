@@ -38,15 +38,15 @@
 <Nav active={2} />
 {#if club}
 	<div class="mt-6 flex justify-center">
-		<div class="container w-2/3 bg-white p-8 rounded-xl space-y-4">
+		<div class="container w-2/3 bg-white p-8 rounded-xl space-y-2 overflow-y-scroll">
 			<p
-	on:click={() => {
-		history.back();
-	}}
-	class="cursor-pointer hover:text-red"
->
-	<i class="fa-solid fa-backward mr-1"></i> Go Back
-</p>
+				on:click={() => {
+					history.back();
+				}}
+				class="cursor-pointer hover:text-red"
+			>
+				<i class="fa-solid fa-backward mr-1"></i> Go Back
+			</p>
 			<h1 class="text-red font-bold leading-tight tracking-tight text-gray-900 text-3xl">
 				{club.name}
 			</h1>
@@ -133,11 +133,11 @@
 				<h1 class="font-bold leading-tight tracking-tight text-gray-900 text-2xl">
 					Upcoming Events
 				</h1>
-				{#each club.events as event}
-					<div class="grid-cols-2 grid gap-x-4 gap-y-4">
+				<div class="grid-cols-2 grid gap-x-4 gap-y-4">
+					{#each club.events as event}
 						<EventCard {event} />
-					</div>
-				{/each}
+					{/each}
+				</div>
 			{/if}
 		</div>
 	</div>
