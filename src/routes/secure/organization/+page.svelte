@@ -13,7 +13,6 @@
         axios.get("http://localhost:8000/organizations/").then((response) => {
             orgs = response.data
             orgs.sort((a, b) => a.name.localeCompare(b.name))
-            console.log(orgs)
         }).catch((err) => {
 			console.error('Error fetching RSVP status:', err);
 		})

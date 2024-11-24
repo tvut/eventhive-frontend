@@ -29,7 +29,6 @@
     const getHost = (id) => {
         axios.get("http://localhost:8000/organizations/"+id).then((response) => {
             host = response.data
-            console.log(host)
         }).catch((err) => {
 			console.error('Error fetching RSVP status:', err);
 		})
@@ -57,7 +56,7 @@
 		}}
 		class="cursor-pointer fixed top-0 left-0 z-50 bg-gray-200 bg-opacity-50 flex flex-col items-center justify-center h-screen w-screen"
 	>
-		<div class="w-1/3 cursor-default bg-white rounded-lg shadow md:mt-0 xl:p-0 h-4/5">
+		<div class="w-1/2 cursor-default bg-white rounded-lg shadow md:mt-0 xl:p-0 h-4/5">
 			<div class="p-6 space-y-3 sm:p-8">
 				<h1 class="-mt-2 text-red font-bold leading-tight tracking-tight text-gray-900 text-2xl">
 					{event.name}

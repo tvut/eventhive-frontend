@@ -19,7 +19,6 @@
 			.then((response) => {
 				let m = encodeURIComponent("Sign up successful, please log in.")
 				goto("/login?m="+m)
-				console.log(response.data);
 			})
 			.catch((err) => {
                 if(err.status == 400) {
