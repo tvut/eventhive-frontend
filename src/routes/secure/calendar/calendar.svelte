@@ -29,18 +29,17 @@
 </script>
 
 {#key freeFood}
-<div class="flex justify-center w-full">
-	<div class="w-3/5 mt-4">
+	<div class="col-span-2 pt-5 pr-16 ">
 		{#if events && Object.keys(events).length>0}
 			{#if personal}
-				<h1 class="text-4xl font-semibold text-gray-800 mb-8">Your Upcoming Events</h1>
+				<h1 class="text-4xl font-semibold text-gray-800 mb-4">Your Upcoming Events</h1>
 			{/if}
 			{#each Object.keys(events) as year}
-				<h1 class="text-2xl font-semibold text-gray-600">{year}</h1>
+				<h1 class="mt-4 text-2xl font-semibold text-gray-600">{year}</h1>
 				{#each Object.keys(events[year]) as month}
-					<h2 class="text-3xl font-semibold text-gray-700">{months[month - 1]}</h2>
+					<h2 class="text-3xl font-semibold text-gray-700 -mb-4">{months[month - 1]}</h2>
 					{#each Object.keys(events[year][month]) as day}
-						<h3 class="text-4xl font-bold text-gray-800 mb-4 border-b-2 border-gray-300">
+						<h3 class="text-4xl font-bold text-gray-800 mt-4 mb-4 border-b-2 border-gray-300">
 							{day}
 						</h3>
 						{#each events[year][month][day] as event}
@@ -55,5 +54,4 @@
 			<h1 class="text-4xl font-semibold text-gray-800 mt-8 mb-8 text-center">Looks like you have no events!</h1>
 		{/if}
 	</div>
-</div>
 {/key}

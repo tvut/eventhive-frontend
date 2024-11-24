@@ -96,7 +96,7 @@
 		{#if event.location}
 			<p class="font-small">{event.location}</p>
 		{:else}
-			<a class="font-small text-white-600 hover:underline" href={event.link}>{event.link}</a>
+			<a class="font-small text-white-600 hover:underline" href={event.link}>{event.link.slice(0,60)}</a>
 		{/if}
 	</div>
 	<div class="flex items-center">

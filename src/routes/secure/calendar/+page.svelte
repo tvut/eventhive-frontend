@@ -33,8 +33,9 @@
 
 <Nav active={2} />
 
-<div class="flex row-auto w-full container">
+<div class="grid grid-cols-3">
 	<Sidebar bind:categories bind:freeEvent bind:freeFood />
 
 	<Calendar {events} bind:freeFood bind:categories bind:freeEvent />
 </div>
+

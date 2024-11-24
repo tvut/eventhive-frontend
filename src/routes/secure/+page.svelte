@@ -32,4 +32,10 @@
 </script>
 
 <Nav active={1} />
-<Calendar {events} personal/>
+<div class="flex justify-center">
+	<div class="w-2/3">
+		<div class="pl-16">
+			<Calendar {events} personal />
+		</div>
+	</div>
+</div>
