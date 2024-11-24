@@ -26,13 +26,13 @@
 	}}
 >
 	<div>
-		<div class="w-full text-sm font-medium text-gray-900 dark:text-gray-300">
+		<div class="w-full text-md font-medium text-gray-900 dark:text-gray-300">
 			{event.name}
 		</div>
-		<div class="w-full text-xs font-medium text-gray-900 dark:text-gray-300">
+		<div class="w-full text-sm font-medium text-gray-900 dark:text-gray-300">
 			{new Date(event.start_date).toDateString()}, {getampm(event.start_date)}
 		</div>
-		<div class="w-full text-xs font-medium text-gray-900 dark:text-gray-300">
+		<div class="w-full text-sm font-medium text-gray-900 dark:text-gray-300">
 			{event.location}
 		</div>
 	</div>
