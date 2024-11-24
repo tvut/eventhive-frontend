@@ -30,9 +30,7 @@
 			{event.name}
 		</div>
 		<div class="w-full text-xs font-medium text-gray-900 dark:text-gray-300">
-			{new Date(event.start_date).toDateString()}, {getampm(event.start_date)} - {getampm(
-				event.end_date
-			)}
+			{new Date(event.start_date).toDateString()}, {getampm(event.start_date)}
 		</div>
 		<div class="w-full text-xs font-medium text-gray-900 dark:text-gray-300">
 			{event.location}

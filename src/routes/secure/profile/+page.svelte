@@ -102,7 +102,7 @@
 <Nav active={3} />
 
 <div class="flex justify-center">
-	<div class="container w-2/3 bg-gray-50 mt-28 p-8 rounded-xl">
+	<div class="container w-2/3 bg-white mt-28 p-8 rounded-xl">
 		<div class="flex justify-center">
 			<div
 				class="ml-4 text-white rounded-full -mt-24 w-48 h-48 bg-red flex items-center text-center"

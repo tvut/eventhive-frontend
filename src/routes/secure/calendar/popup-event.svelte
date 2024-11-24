@@ -69,7 +69,7 @@
                 {/if}
 				<div class="flex row-auto text-lg font-semibold leading-tight tracking-tight text-gray-900">
 					<div class="w-8"><i class="mr-4 fa-regular fa-clock"></i></div>
-					{getampm(event.start_date)} - {getampm(event.end_date)}
+					{getampm(event.start_date)}
 				</div>
 				<div class="flex row-auto text-md font-semibold leading-tight tracking-tight text-gray-700">
 					<div class="w-8"><i class="fa-regular fa-calendar mr-4"></i></div>
@@ -96,12 +96,14 @@
 							{event.link}</a
 						>
 					</div>
+					{#if event.cost}
 					<div
 						class="text-md font-semibold leading-tight tracking-tight text-gray-700 flex row-auto"
 					>
 						<div class="w-8"><i class="fa-solid fa-dollar-sign"></i></div>
 						{event.cost == 0 ? 'Free' : '$' + event.cost}
 					</div>
+					{/if}
 				{/if}
 				{#if event.food}
 					<div
@@ -114,7 +116,7 @@
 				<p class="text-md">{event.description}</p>
 
 				<div>
-					{#if event.attendees.length > 0}
+					{#if event.attendees && event.attendees.length > 0}
 						<h2 class="text-xl font-bold mt-4">Who's Attending?</h2>
 						<div class="relative flex mt-2">
 							<div class="pl-2">

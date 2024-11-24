@@ -38,17 +38,17 @@
 </script>
 
 <Nav active={2} />
-<p
+{#if club}
+	<div class="mt-6 flex justify-center">
+		<div class="container w-2/3 bg-white p-8 rounded-xl space-y-4">
+			<p
 	on:click={() => {
 		history.back();
 	}}
-	class="h-12 p-4 cursor-pointer hover:text-red"
+	class="cursor-pointer hover:text-red"
 >
 	<i class="fa-solid fa-backward mr-1"></i> Go Back
 </p>
-{#if club}
-	<div class="-mt-8 flex justify-center">
-		<div class="container w-2/3 bg-gray-50 p-8 rounded-xl space-y-4">
 			<h1 class="text-red font-bold leading-tight tracking-tight text-gray-900 text-3xl">
 				{club.name}
 			</h1>
@@ -132,7 +132,7 @@
 				{/if}
 			</div>
 			{#if club.events.length > 0}
-				<h1 class="text-red font-bold leading-tight tracking-tight text-gray-900 text-2xl">
+				<h1 class="font-bold leading-tight tracking-tight text-gray-900 text-2xl">
 					Upcoming Events
 				</h1>
 				{#each club.events as event}

@@ -92,11 +92,11 @@
 >
 	<div>
 		<h4 class="text-2xl font-semibold">{event.name}</h4>
-		<h3 class="text-xl">{getampm(event.start_date)} - {getampm(event.end_date)}</h3>
+		<h3 class="text-xl">{getampm(event.start_date)}</h3>
 		{#if event.location}
 			<p class="font-small">{event.location}</p>
-		{:else}
-			<a class="font-small text-white-600 hover:underline" href={event.link}>{event.link.slice(0,60)}</a>
+		{:else if event.link}
+			<a class="font-small text-white-600 hover:underline" href={event.link}>{event.link.slice(0,70)}</a>
 		{/if}
 	</div>
 	<div class="flex items-center">
