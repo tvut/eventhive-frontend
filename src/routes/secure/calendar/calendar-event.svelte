@@ -103,11 +103,14 @@
 		<button
 			on:click|stopPropagation={toggleRSVP}
 			class="w-10 h-10 rounded-full"
-			style="background-color: {getBg(event.category)}; display: flex; justify-content: center; align-items: center;"
+			class:bg-white={isRSVPed}
+			style="display: flex; justify-content: center; align-items: center;"
 		>
 			<i
 				class="fa-sharp fa-solid fa-heart text-2xl"
-				style="color: {isRSVPed ? 'lightpink' : 'darkpink'};"
+				class:hover:text-gray-500={isRSVPed}
+				class:hover:text-red={!isRSVPed}
+				class:text-red={isRSVPed}
 			></i>
 		</button>
 	</div>
