@@ -11,6 +11,7 @@
 	let events;
 
 	const getEventsBlob = async () => {
+		console.log("Polling")
 		axios
 			.get('http://localhost:8000/groupedevents')
 			.then((response) => {
@@ -23,7 +24,8 @@
 		if (!get(authToken)) {
 			goto('/login');
 		}
-		getEventsBlob();
+		getEventsBlob()
+		setInterval(getEventsBlob, 3000);
 	});
 
 	let categories = [true, true, true, true, true];
