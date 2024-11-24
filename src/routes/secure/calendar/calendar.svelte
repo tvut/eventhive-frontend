@@ -52,7 +52,7 @@
 				{/each}
 			{/each}
 		{:else if personal}
-			You have no events.
+			<h1 class="text-4xl font-semibold text-gray-800 mt-8 mb-8 text-center">Looks like you have no events!</h1>
 		{/if}
 	</div>
 </div>
