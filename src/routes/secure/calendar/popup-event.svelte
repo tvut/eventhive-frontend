@@ -55,7 +55,7 @@
 		on:click={() => {
 			popup = !popup;
 		}}
-		class="cursor-pointer absolute top-0 left-0 z-50 bg-gray-200 bg-opacity-50 flex flex-col items-center justify-center h-screen w-screen"
+		class="cursor-pointer fixed top-0 left-0 z-50 bg-gray-200 bg-opacity-50 flex flex-col items-center justify-center h-screen w-screen"
 	>
 		<div class="w-1/3 cursor-default bg-white rounded-lg shadow md:mt-0 xl:p-0 h-4/5">
 			<div class="p-6 space-y-3 sm:p-8">
