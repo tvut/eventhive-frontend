@@ -4,11 +4,6 @@
 	import { get } from 'svelte/store';
 	import { authToken } from '../../../stores/auth';
 	import { onMount } from 'svelte';
-	import '@fortawesome/fontawesome-free/css/all.min.css';
-	import axios from 'axios';
-	import { get } from 'svelte/store';
-	import { authToken } from '../../../stores/auth';
-	import { onMount } from 'svelte';
 
 	export let event;
 
@@ -49,11 +44,6 @@
 		);
 	};
 
-	const toggleRSVP = async () => {
-		let token = get(authToken);
-		let config = {
-			headers: { Authorization: `Bearer ${token}` }
-		};
 	const toggleRSVP = async () => {
 		let token = get(authToken);
 		let config = {
@@ -102,19 +92,12 @@
 			console.error('Error fetching RSVP status:', err);
 		}
 	};
-		try {
-			const response = await axios.get(`http://localhost:8000/rsvp/`, config);
-			const rsvpEvents = response.data || [];
-			isRSVPed = rsvpEvents.some((e) => e.id === event.id);
-		} catch (err) {
-			console.error('Error fetching RSVP status:', err);
-		}
-	};
 
 	onMount(() => {
 		checkRSVPStatus();
 		getEvent();
 	});
+
 </script>
 
 <div
