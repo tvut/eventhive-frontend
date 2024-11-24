@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from "svelte";
     import axios from 'axios';
+	import { goto } from "$app/navigation";
 
 	export let event;
 	export let popup = false;
@@ -34,7 +35,17 @@
 		})
     }
 
+	const getEvent = async () => {
+		try {
+			const response = await axios.get(`http://localhost:8000/events/${event.id}`);
+			event = response.data;
+		} catch (err) {
+			console.error('Error fetching event:', err);
+		}
+	};
+
     onMount(() => {
+		getEvent()
         getHost(event.host_id)
     })
 </script>
@@ -52,7 +63,7 @@
 					{event.name}
 				</h1>
                 {#if host}
-                <h1 class="font-bold leading-tight tracking-tight text-gray-900 text-xl">
+                <h1 on:click={()=>{goto("/secure/organization/"+host.id)}} class="cursor-pointer font-bold leading-tight tracking-tight text-gray-900 text-xl">
 					{host.name}
 				</h1>
                 {/if}

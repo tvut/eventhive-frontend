@@ -62,20 +62,6 @@
 		}
 	};
 
-	const getEvent = async () => {
-		let token = get(authToken);
-		let config = {
-			headers: { Authorization: `Bearer ${token}` }
-		};
-
-		try {
-			const response = await axios.get(`http://localhost:8000/events/${event.id}`, config);
-			event = response.data;
-		} catch (err) {
-			console.error('Error fetching event:', err);
-		}
-	};
-
 	const checkRSVPStatus = async () => {
 		let token = get(authToken);
 		let config = {
@@ -93,7 +79,6 @@
 
 	onMount(() => {
 		checkRSVPStatus();
-		getEvent();
 	});
 
 </script>
