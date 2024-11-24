@@ -118,7 +118,7 @@
 					{#if event.attendees && event.attendees.length > 0}
 						<h2 class="text-xl font-bold mt-4">Who's Attending?</h2>
 						<div class="relative flex mt-2">
-							<div class="pl-2">
+							<div class="pl-2 flex row-auto">
 								{#each event.attendees as user, index}
 									<div
 										class="-ml-2 text-white rounded-full w-8 h-8 flex items-center text-center"
@@ -132,9 +132,8 @@
 									</div>
 									{#if hoveredUserIndex === index}
 										<div
-											class="absolute -bottom-6 left-0 transform translate-x-{index *
-												2} text-sm text-gray-600"
-											style="white-space: nowrap;"
+											class="absolute -bottom-6 transform text-sm text-gray-600"
+											style="white-space: nowrap; left:{hoveredUserIndex * 26-8}px"
 										>
 											{user.name ? user.name : user.username}
 										</div>
