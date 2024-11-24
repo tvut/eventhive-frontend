@@ -33,7 +33,7 @@
 	<div class="w-3/5 mt-4">
 		{#if events && Object.keys(events).length>0}
 			{#if personal}
-				<h1 class="text-4xl font-semibold text-gray-800 mb-8">Your Events</h1>
+				<h1 class="text-4xl font-semibold text-gray-800 mb-8">Your Upcoming Events</h1>
 			{/if}
 			{#each Object.keys(events) as year}
 				<h1 class="text-2xl font-semibold text-gray-600">{year}</h1>
