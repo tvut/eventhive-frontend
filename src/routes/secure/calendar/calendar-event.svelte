@@ -17,15 +17,15 @@
 
 	const getBg = (s) => {
 		if (s == 'Social') {
-			return '#306B34';
+			return '#624cab';
 		} else if (s == 'Academic') {
-			return '#1C5253';
+			return '#08b2e3';
 		} else if (s == 'Sports') {
-			return '#C9D3A4';
+			return '#628b48';
 		} else if (s == 'Club') {
-			return '#C3EB78';
+			return '#fff370';
 		} else if (s == 'Professional') {
-			return '#B6174B';
+			return '#094074';
 		} else {
 			return '#E83838';
 		}
