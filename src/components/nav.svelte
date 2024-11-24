@@ -46,7 +46,7 @@
 						goto('/secure/');
 					}}
 					class:text-red={active == 1}
-					class="cursor-pointer block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+					class="cursor-pointer block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0"
 				>
 					Home
 				</p>
@@ -56,7 +56,7 @@
 							goto('/secure/calendar');
 						}}
 						class:text-red={active == 2}
-						class="h-full cursor-pointer block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+						class="h-full cursor-pointer block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0"
 					>
 						Calendar
 					</p>
@@ -67,7 +67,7 @@
 							goto('/secure/organization');
 						}}
 						class:text-red={active == 4}
-						class="h-full cursor-pointer block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+						class="h-full cursor-pointer block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0"
 					>
 						Organizations
 					</p>
@@ -79,7 +79,7 @@
 								goto('/secure/profile');
 							}}
 							class:text-red={active == 3}
-							class="flex items-center flex-row cursor-pointer block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+							class="flex items-center flex-row cursor-pointer block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-700 md:p-0"
 						>
 							<p>Profile</p>
 							<div

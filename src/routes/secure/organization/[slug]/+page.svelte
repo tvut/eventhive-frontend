@@ -16,8 +16,6 @@
 			headers: { Authorization: `Bearer ${token}` }
 		};
 
-		console.log($page.params.slug);
-
 		try {
 			const response = await axios.get(
 				'http://localhost:8000/organizations/' + $page.params.slug,

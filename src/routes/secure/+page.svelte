@@ -29,13 +29,23 @@
 		}
 		getEventsBlob();
 	});
+
+	let toggleRefresh = false;
+
+	$:{
+		if(toggleRefresh) {
+			events=[]
+			getEventsBlob()
+			toggleRefresh = false
+		}
+	}
 </script>
 
 <Nav active={1} />
 <div class="flex justify-center">
 	<div class="w-2/3">
-		<div class="pl-16">
-			<Calendar {events} personal />
+		<div class="ml-8">
+			<Calendar {events} bind:toggleRefresh personal/>
 		</div>
 	</div>
 </div>

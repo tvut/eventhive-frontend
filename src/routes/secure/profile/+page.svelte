@@ -102,10 +102,10 @@
 <Nav active={3} />
 
 <div class="flex justify-center">
-	<div class="container w-2/3 bg-white mt-28 p-8 rounded-xl">
+	<div class="container w-2/3 bg-white mt-28 p-8 rounded-xl shadow">
 		<div class="flex justify-center">
 			<div
-				class="ml-4 text-white rounded-full -mt-24 w-48 h-48 bg-red flex items-center text-center"
+				class="ml-4 text-white rounded-full -mt-32 shadow-lg w-48 h-48 bg-red flex items-center text-center"
 			>
 				<p class="text-9xl w-full text-center">{(data.name ? data.name : data.username).toUpperCase().charAt(0)}</p>
 			</div>

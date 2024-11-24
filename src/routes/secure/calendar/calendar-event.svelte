@@ -6,6 +6,8 @@
 	import { onMount } from 'svelte';
 	import PopupEvent from './popup-event.svelte';
 
+	export let toggleRefresh = false;
+
 	export let event;
     let isRSVPed = false;
 	let popup = false;
@@ -52,11 +54,11 @@
 			if (isRSVPed) {
 				await axios.delete(`http://localhost:8000/rsvp/${event.id}`, config);
 				isRSVPed = false;
+				toggleRefresh = true;
 			} else {
 				await axios.post(`http://localhost:8000/rsvp/${event.id}`, {}, config);
 				isRSVPed = true;
 			}
-			await fetchRSVPedUsers(); // Refresh attendees
 		} catch (err) {
 			console.error('Error toggling RSVP:', err);
 		}
@@ -88,7 +90,7 @@
 		popup = !popup;
 	}}
 	style="background-color: {getBg(event.category)};"
-	class="cursor-pointer text-white rounded-xl p-4 my-2 flex justify-between items-center"
+	class="shadow cursor-pointer text-white rounded-xl p-4 my-3 flex justify-between items-center"
 >
 	<div>
 		<h4 class="text-2xl font-semibold">{event.name}</h4>

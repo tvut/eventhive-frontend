@@ -29,6 +29,7 @@
 	let categories = [true, true, true, true, true];
 	let freeFood = false;
 	let freeEvent = false;
+
 </script>
 
 <Nav active={2} />
@@ -36,6 +37,6 @@
 <div class="grid grid-cols-3">
 	<Sidebar bind:categories bind:freeEvent bind:freeFood />
 
-	<Calendar {events} bind:freeFood bind:categories bind:freeEvent />
+	<Calendar {events} bind:freeFood bind:categories bind:freeEvent/>
 </div>
 
