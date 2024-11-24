@@ -1,4 +1,7 @@
 <script>
+	import { onMount } from "svelte";
+    import axios from 'axios';
+
 	export let event;
 	export let popup = false;
 
@@ -20,20 +23,20 @@
 		);
 	};
 
-    const getHost = (id) => {
-        let token = get(authToken);
-		let config = {
-			headers: { Authorization: `Bearer ${token}` }
-		};
+    let host;
 
-		try {
-			const response = await axios.get("http://localhost:8000/organizations/"+id, config);
-			const rsvpEvents = response.data || [];
-			isRSVPed = rsvpEvents.some((e) => e.id === event.id);
-		} catch (err) {
+    const getHost = (id) => {
+        axios.get("http://localhost:8000/organizations/"+id).then((response) => {
+            host = response.data
+            console.log(host)
+        }).catch((err) => {
 			console.error('Error fetching RSVP status:', err);
-		}
+		})
     }
+
+    onMount(() => {
+        getHost(event.host_id)
+    })
 </script>
 
 {#if popup}
@@ -43,11 +46,16 @@
 		}}
 		class="cursor-pointer absolute top-0 left-0 z-50 bg-gray-200 bg-opacity-50 flex flex-col items-center justify-center h-screen w-screen"
 	>
-		<div class="cursor-default w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0 h-3/4">
+		<div class="w-1/3 cursor-default bg-white rounded-lg shadow md:mt-0 xl:p-0 h-4/5">
 			<div class="p-6 space-y-3 sm:p-8">
-				<h1 class="text-red font-bold leading-tight tracking-tight text-gray-900 text-2xl">
+				<h1 class="-mt-2 text-red font-bold leading-tight tracking-tight text-gray-900 text-2xl">
 					{event.name}
 				</h1>
+                {#if host}
+                <h1 class="font-bold leading-tight tracking-tight text-gray-900 text-xl">
+					{host.name}
+				</h1>
+                {/if}
 				<div class="flex row-auto text-lg font-semibold leading-tight tracking-tight text-gray-900">
 					<div class="w-8"><i class="mr-4 fa-regular fa-clock"></i></div>
 					{getampm(event.start_date)} - {getampm(event.end_date)}
