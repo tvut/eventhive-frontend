@@ -172,18 +172,22 @@
 			</div>
 			<div>
 				<label for="year" class="block mb-2 text-sm font-medium text-gray-900">What Year Are You In?</label>
-				<input
+				<select
 					id="year"
 					bind:value={data.year}
-					type="number"
-					name="year"
-					class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-					placeholder="Enter your year"
-				/>
+					class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+				>
+					<option value="" disabled selected hidden>Choose your year</option>
+					<option value="1">1st Year</option>
+					<option value="2">2nd Year</option>
+					<option value="3">3rd Year</option>
+					<option value="4">4th Year</option>
+					<option value="5">5th Year or more</option>
+				</select>
 				{#if errors.year}
 					<p class="text-rose-600 text-sm mt-1">{errors.year}</p>
 				{/if}
-			</div>
+			</div>						
 			<div>
 				<label for="attendance" class="block mb-2 text-sm font-medium text-gray-900">Public Event Attendance</label>
 				<div class="grid grid-cols-2">
