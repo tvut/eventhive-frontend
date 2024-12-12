@@ -35,7 +35,7 @@
 	});
 </script>
 
-<Nav active={2} />
+<Nav active={4} />
 {#if club}
 	<div class="mt-6 flex justify-center">
 		<div class="container w-2/3 bg-white p-8 rounded-xl space-y-2 overflow-y-scroll">
